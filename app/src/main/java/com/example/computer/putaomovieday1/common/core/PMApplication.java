@@ -24,7 +24,7 @@ public class PMApplication extends Application{
     @Override
     public void onCreate() {
         super.onCreate();
-    sIntance=this;
+       sIntance=this;
         requestQueue= Volley.newRequestQueue(this);
     }
     /**

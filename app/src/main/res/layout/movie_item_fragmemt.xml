@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/movie_item_img"
+        android:layout_width="66dp"
+        android:layout_height="88dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/ic_launcher">
+
+    </com.android.volley.toolbox.NetworkImageView>
+
+    <TextView
+        android:id="@+id/movie_item_gcedition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/movie_item_img"
+        android:layout_alignTop="@id/movie_item_img"
+        android:text="3D"/>
+
+    <TextView
+        android:id="@+id/movie_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/movie_item_img"
+        android:layout_centerHorizontal="true"
+        android:maxWidth="@dimen/movie_item_text_width"
+        android:text="aaaa" />
+    <LinearLayout
+        android:id="@+id/rating_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/movie_item_text"
+        android:orientation="horizontal">
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rating_rb"
+            android:isIndicator="true"
+            android:stepSize="0.5"
+            android:rating="2"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:numStars="5"/>
+        <TextView
+            android:id="@+id/rating_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/movie_item_buy_btn"
+        android:layout_below="@id/rating_layout"
+        android:layout_centerHorizontal="true"
+        android:text="购买"/>
+</RelativeLayout>
