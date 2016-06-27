@@ -32,4 +32,5 @@ private ViewPager mViewPager;
         PagerAdapter pagerAdapter=new viewpagerAdapter(getSupportFragmentManager(),fragments);
         mViewPager.setAdapter(pagerAdapter);
     }
+
 }
