@@ -1,6 +1,5 @@
 package com.example.computer.putaomovieday1.movie.Adapter;
 
-import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -13,7 +12,7 @@ import com.example.computer.putaomovieday1.R;
 import com.example.computer.putaomovieday1.common.core.PMApplication;
 import com.example.computer.putaomovieday1.common.util.T;
 import com.example.computer.putaomovieday1.movie.resp.movie;
-import com.example.computer.putaomovieday1.movie.util.BitmapCache;
+import com.example.computer.putaomovieday1.common.util.BitmapCache;
 
 import java.util.List;
 

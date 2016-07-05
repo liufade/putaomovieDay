@@ -23,7 +23,15 @@ public class Cinema {
     /**电影、场次描述 N */private String countdes;
     /**cp数目 N 支持的比价的cp数目*/private int cpcount;
     /**价格区间 N 用-分割开，最低价放前面，最高价放后面*/private String pricerange;
+    /**起步价*/private int stepPrice;
 
+    public int getStepPrice() {
+        return stepPrice;
+    }
+
+    public void setStepPrice(int stepPrice) {
+        this.stepPrice = stepPrice;
+    }
 
     public Long getId() {
         return id;

@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
+import com.baidu.mapapi.SDKInitializer;
 
 /**
  * Created by computer on 2016/6/21.
@@ -26,6 +27,7 @@ public class PMApplication extends Application{
         super.onCreate();
        sIntance=this;
         requestQueue= Volley.newRequestQueue(this);
+        SDKInitializer.initialize(this);
     }
     /**
      * 获得Volley的Http的请求队列
@@ -33,4 +35,6 @@ public class PMApplication extends Application{
     public RequestQueue getRequestQueue(){
         return requestQueue;
     }
+
+
 }

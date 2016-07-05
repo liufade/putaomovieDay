@@ -1,11 +1,13 @@
 package com.example.computer.putaomovieday1.movie.resp;
 
+import java.io.Serializable;
+
 /**
  * Created by computer on 2016/6/21.
  */
 
 
-public class movie {
+public class movie implements Serializable{
 //    /**名称 必选 说明*/private 类型 参数;
     /**影片id Y 　*/private Long movieid;
     /**影片名称 Y 　*/private String moviename;
@@ -21,7 +23,42 @@ public class movie {
     /**影片logo Y 　*/private String logo;
     /**影片评分 N 　*/private String generalmark;
     /**影片版本 N 　*/private String gcedition;
+    /**
+     * 剧情内容
+     */
+    private String  content;
+    /**
+     * 剧照
+     */
+    private String still;
+    /**
+     * 视频的url地址
+     */
+    private String videourl;
 
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getStill() {
+        return still;
+    }
+
+    public void setStill(String still) {
+        this.still = still;
+    }
+
+    public String getVideourl() {
+        return videourl;
+    }
+
+    public void setVideourl(String videourl) {
+        this.videourl = videourl;
+    }
 
     public Long getMovieid() {
         return movieid;
@@ -135,23 +172,5 @@ public class movie {
         this.gcedition = gcedition;
     }
 
-    @Override
-    public String toString() {
-        return "movie{" +
-                "movieid=" + movieid +
-                ", moviename='" + moviename + '\'' +
-                ", englishname='" + englishname + '\'' +
-                ", language='" + language + '\'' +
-                ", type='" + type + '\'' +
-                ", state='" + state + '\'' +
-                ", director='" + director + '\'' +
-                ", actors='" + actors + '\'' +
-                ", length='" + length + '\'' +
-                ", highlight='" + highlight + '\'' +
-                ", releasedate=" + releasedate +
-                ", logo='" + logo + '\'' +
-                ", generalmark='" + generalmark + '\'' +
-                ", gcedition='" + gcedition + '\'' +
-                '}';
-    }
+
 }
