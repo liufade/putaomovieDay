@@ -1,5 +1,7 @@
 package com.example.computer.putaomovieday1.movie.Adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -13,6 +15,7 @@ import com.example.computer.putaomovieday1.common.core.PMApplication;
 import com.example.computer.putaomovieday1.common.util.T;
 import com.example.computer.putaomovieday1.movie.resp.movie;
 import com.example.computer.putaomovieday1.common.util.BitmapCache;
+import com.example.computer.putaomovieday1.movie.ui.CinemaListActivity;
 
 import java.util.List;
 
@@ -53,7 +56,7 @@ public class MovieAdapter extends BaseAdapter{
         }else {
             viewHolder= (ViewHolder) convertView.getTag();
         }
-        movie mMovie=mData.get(position);
+       final movie mMovie=mData.get(position);
 
         viewHolder.nameTv.setText(mMovie.getMoviename());
         viewHolder.posterNiv.setImageUrl(mMovie.getLogo(),imageLoader);
@@ -62,7 +65,11 @@ public class MovieAdapter extends BaseAdapter{
         viewHolder.buyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                T.showShort(v.getContext(),"buy");
+                Context context= v.getContext();
+                Intent intent=new Intent(context, CinemaListActivity.class);
+                intent.putExtra("movieName",mMovie.getMoviename());
+                intent.putExtra("movieId",mMovie.getMovieid());
+                context.startActivity(intent);
             }
         });
         return convertView;

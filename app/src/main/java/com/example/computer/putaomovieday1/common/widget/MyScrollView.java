@@ -1,8 +1,16 @@
 package com.example.computer.putaomovieday1.common.widget;
 
 import android.content.Context;
+import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ScrollView;
+
+import com.android.volley.toolbox.ImageLoader;
+import com.example.computer.putaomovieday1.common.adapter.SimplePagerAdapter;
+
+import java.util.List;
 
 /**
  * Created by computer on 2016/7/5.
@@ -34,4 +42,6 @@ public class MyScrollView extends ScrollView{
     public void setmScrollChangeListener(IScrollChangeListener mScrollChangeListener) {
         this.mScrollChangeListener = mScrollChangeListener;
     }
+
+
 }

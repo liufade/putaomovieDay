@@ -52,8 +52,9 @@ public class HeaderLayout extends LinearLayout{
             mBtnRight.setVisibility(View.VISIBLE);
         }
         //默认设置白色背景
-        setBackgroundColor(Color.WHITE);
+        setBackgroundColor(Color.BLUE);
     }
+
 
     /**
      * 设置头布局的标题
@@ -77,4 +78,5 @@ public class HeaderLayout extends LinearLayout{
     public void setRightBtnClick(OnClickListener listener) {
         mBtnRight.setOnClickListener(listener);
     }
+
 }

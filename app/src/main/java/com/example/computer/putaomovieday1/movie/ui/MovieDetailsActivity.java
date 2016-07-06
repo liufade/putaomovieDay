@@ -80,8 +80,8 @@ public class MovieDetailsActivity extends BaseActivity implements View.OnClickLi
 
     private void initView() {
         mHeaderLayout = (HeaderLayout) findViewById(R.id.header);
-        mHeaderLayout.setAlpha(0);//默认为透明
         mHeaderLayout.setTitleTxt(mPassMovie.getMoviename());//将影片名字设置到标题上
+
         mMovieLogo = (ImageView) findViewById(R.id.movie_logo);//电影海报
         mRatingbar = (RatingBar) findViewById(R.id.movie_star);//影片得分ratingbar表现
         movieMark = (TextView) findViewById(R.id.movie_general_mark);//影片分数
@@ -197,7 +197,10 @@ public class MovieDetailsActivity extends BaseActivity implements View.OnClickLi
                 break;
 
             case R.id.movie_select_seat://选影院购票
-
+                intent=new Intent(this, CinemaListActivity.class);
+                intent.putExtra("movieName",mPassMovie.getMoviename());
+                intent.putExtra("movieId",mPassMovie.getMovieid());
+                startActivity(intent);
                 break;
         }
     }

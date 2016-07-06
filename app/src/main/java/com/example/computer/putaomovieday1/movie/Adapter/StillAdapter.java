@@ -48,7 +48,7 @@ public class StillAdapter extends RecyclerView.Adapter<StillViewHolder>{
 
     @Override
     public int getItemCount() {
-        return 0;
+        return stills.length;
     }
 
     public IOnItemClickListener getOnItemClickListener() {

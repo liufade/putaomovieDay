@@ -17,6 +17,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!-- 访问网络，网络定位需要上网 -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <supports-screens
         android:anyDensity="true"
@@ -34,10 +35,16 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="amLy2HLLpXq2ENd1vFth2M14mSRgQa7Z" />
+            android:value="WoAAwCtCRFtTqabc1Wt6GeAr0YS5NzXu" />
 
         <activity android:name=".common.ui.MainActivity" />
-        <activity android:name=".movie.ui.MovieMainActivity"/>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <activity android:name=".movie.ui.MovieMainActivity" />
         <activity android:name=".common.ui.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -46,14 +53,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".common.core.BaseActivity" />
-        <activity android:name=".movie.ui.PlayVideoActivity"/>
-        <activity android:name=".movie.ui.ShowStillActivity"/>
-
+        <activity android:name=".movie.ui.PlayVideoActivity" />
+        <activity android:name=".movie.ui.ShowStillActivity" />
+        <activity android:name=".movie.ui.CinemaListActivity" />
+        <activity android:name=".movie.ui.MovieDetailsActivity" />
         <activity
-            android:name=".movie.ui.MovieDetailsActivity">
-
-        </activity>
-
+            android:name=".movie.ui.CinemaDetailActivity"
+            android:label="@string/title_activity_cinema_detail"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

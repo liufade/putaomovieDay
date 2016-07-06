@@ -26,18 +26,21 @@
             android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="@dimen/header_height"
-            android:orientation="vertical"/>
+            android:orientation="vertical">
+
+        </com.example.computer.putaomovieday1.common.widget.HeaderLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:orientation="vertical">
 
             <RelativeLayout
-                android:id="@+id/movie_detail_header" android:background="#8000"
+                android:id="@+id/movie_detail_header"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:background="#8000"
                 android:paddingBottom="@dimen/activity_vertical_margin"
                 android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:paddingRight="@dimen/activity_horizontal_margin"
@@ -266,17 +269,17 @@
     </FrameLayout>
 
     <LinearLayout
-android:layout_width="match_parent"
-android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-<Button
-    android:id="@+id/movie_select_seat"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
-    android:layout_marginTop="16dp"
-    android:gravity="center"
-    android:text="选影院购票" />
-</LinearLayout>
+        <Button
+            android:id="@+id/movie_select_seat"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="选影院购票" />
     </LinearLayout>
+</LinearLayout>
